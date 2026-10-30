@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Bash(npm install:*)",
+      "Bash(npm i:*)",
+      "Bash(git commit --no-verify:*)"
+    ]
+  }
+}

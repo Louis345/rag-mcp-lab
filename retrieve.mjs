@@ -62,6 +62,9 @@ for (const { query, expectedFileName } of testCases) {
   // console.log(`${passed ? "PASS" : "FAIL"}\n`);
   percentage = (passedCount / testCases.length) * 100;
 }
+if (passedCount !== testCases.length) {
+  process.exitCode = 1;
+}
 console.dir(results, { depth: null });
 console.log(
   `Top-1 Accuracy: ${passedCount}  / ${testCases.length} (${percentage.toFixed(2)}%).`,

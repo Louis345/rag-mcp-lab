@@ -1,0 +1,4 @@
+#!/bin/sh
+# Blocks the commit if safety checks or retrieval tests fail.
+node scripts/check-docs.mjs || exit 1
+node retrieve.mjs > /dev/null || { echo "Retrieval tests FAILED. Run: node retrieve.mjs"; exit 1; }
